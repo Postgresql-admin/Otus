@@ -1,6 +1,6 @@
 1. Создание проекта 
 
-ssh -i /var/lib/postgresql/.ssh/id_rsa rukomoykinav@89.169.188.99
+https://github.com/Postgresql-admin/Otus
 
 2. Настройка SSH-доступа
 
@@ -47,6 +47,9 @@ drwxr-xr-x 10 postgres postgres 4096 сен 28 02:57 ..
 -rw-------  1 postgres postgres  397 сен 28 02:57 id_rsa.pub
 drwx------  2 postgres postgres 4096 сен 28 02:57 .
 ```
+
+ssh -i /var/lib/postgresql/.ssh/id_rsa rukomoykinav@89.169.188.99
+
 3. Установка PostgreSQL
 
 sudo apt update && sudo apt upgrade -y && sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list' && wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add - && sudo apt-get update && sudo apt-get -y install postgresql && sudo apt install unzip && sudo apt -y install mc
