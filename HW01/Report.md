@@ -5,6 +5,7 @@ ssh -i /var/lib/postgresql/.ssh/id_rsa rukomoykinav@89.169.188.99
 2. Настройка SSH-доступа
 
 postgres@Work01:~$ ssh-keygen -t rsa -b 2048
+```bash
 Generating public/private rsa key pair.
 Enter file in which to save the key (/var/lib/postgresql/.ssh/id_rsa):
 Created directory '/var/lib/postgresql/.ssh'.
@@ -45,7 +46,7 @@ drwxr-xr-x 10 postgres postgres 4096 сен 28 02:57 ..
 -rw-------  1 postgres postgres 1876 сен 28 02:57 id_rsa
 -rw-------  1 postgres postgres  397 сен 28 02:57 id_rsa.pub
 drwx------  2 postgres postgres 4096 сен 28 02:57 .
-
+```
 3. Установка PostgreSQL
 
 sudo apt update && sudo apt upgrade -y && sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list' && wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add - && sudo apt-get update && sudo apt-get -y install postgresql && sudo apt install unzip && sudo apt -y install mc
